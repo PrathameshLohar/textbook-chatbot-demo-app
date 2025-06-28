@@ -14,12 +14,12 @@ def load_model():
     )
 
     model = AutoModelForCausalLM.from_pretrained(
-        "Prathamesh25/Llama-2-7b-textbook-chatbot",
+        "Prathamesh25/Llama-2-7b-chatbot-textbook",
         device_map="auto",
         quantization_config=bnb_config,
         torch_dtype=torch.float16,
     )
-    tokenizer = AutoTokenizer.from_pretrained("Prathamesh25/Llama-2-7b-textbook-chatbot")
+    tokenizer = AutoTokenizer.from_pretrained("Prathamesh25/Llama-2-7b-chatbot-textbook")
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
     return model, tokenizer
