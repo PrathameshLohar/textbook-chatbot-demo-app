@@ -1,0 +1,17 @@
+# Core app
+streamlit>=1.32.0
+
+# Transformers & model loading
+transformers>=4.38.0
+accelerate>=0.27.0
+peft>=0.8.2
+datasets>=2.18.0
+
+# 4-bit quantization (QLoRA support)
+bitsandbytes>=0.42.0
+
+# Torch (compatible with your GPU, check CUDA version)
+torch>=2.1.0
+
+# (Optional) for better logging/debugging
+scipy
